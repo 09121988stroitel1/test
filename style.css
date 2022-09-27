@@ -1,3 +1,6 @@
+
+/* тест 1 */
+/* 
 * {
     margin: 0;
     padding: 0;
@@ -53,5 +56,144 @@
     padding-bottom: 2px; 
     background-color: rgb(58, 121, 135);
    
-     }
+     } */
   
+
+     /* тест 2 */
+
+     * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    .btn {
+      position: absolute;
+     left: 42%;
+      top: 45%;
+      box-sizing: border-box;
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none;
+      background-color: transparent;
+      border: 2px solid #e74c3c;
+      border-radius: 0.6em;
+      color: #e74c3c;
+      cursor: pointer;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-self: center;
+          -ms-flex-item-align: center;
+              align-self: center;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1;
+      margin: 20px;
+      padding: 1.2em 2.8em;
+      text-decoration: none;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+    }
+    .btn:hover, .btn:focus {
+      color: rgb(19, 18, 18);
+      outline: 0;
+    }
+    .third {
+      border-color: #3498db;
+      color: #fff;
+      box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+      -webkit-transition: all 150ms ease-in-out;
+      transition: all 150ms ease-in-out;
+    }
+    .third:hover {
+      box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+    }
+  
+    .block {
+      /* display: flex; */
+      background-color: #3498db;
+      width: 5vw;
+      height: 5vw;
+  
+    }
+  
+    .inputButton {
+      position: absolute;
+      left: 100px;
+      top: 200px;
+      
+    }
+  
+  
+  
+  
+  
+    .red {
+      width: 5vw;
+      height: 5vw;
+      border: black solid 2px;
+      background-color: red;
+    }
+  
+    .green {
+      width: 5vw;
+      height: 5vw;
+      border: black solid 2px;
+      background-color: green;
+    }
+  
+    .blue {
+      width: 5vw;
+      height: 5vw;
+      border: black solid 2px;
+      background-color: blue;
+    }
+  
+    .yellow {
+      width: 5vw;
+      height: 5vw;
+      border: black solid 2px;
+      background-color: yellow;
+    }
+  
+    .pink {
+      width: 5vw;
+      height: 5vw;
+      border: black solid 2px;
+      background-color: pink;
+    }
+  
+    .black {
+      width: 5vw;
+      height: 5vw;
+      border: black solid 2px;
+      background-color: black;
+    }
+  
+    .orange {
+      width: 5vw;
+      height: 5vw;
+      border: black solid 2px;
+      background-color: orange;
+    }
+  
+    .purple {
+      width: 5vw;
+      height: 5vw;
+      border: black solid 2px;
+      background-color: purple;
+    }
+    .active {
+      display: none;
+    }
+    .button-word {
+      position: absolute;
+      left: 200px;
+      top: 200px;
+      /* background-color: black; */
+      z-index: 9999;
+    }
