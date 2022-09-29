@@ -199,6 +199,15 @@ class FilterColor {
        this.InputRadio.className = 'button'
        this.InputRadio.value = 'или'
        document.getElementById('component').append( this.InputRadio )
+           this.InputRadio.onchange = () => {
+          this.DivContainer.querySelectorAll(`div`).forEach((i) => { 
+          if(i.className !== this.InputRadio.value ) {
+             i.remove()
+          } else {
+              return i
+          }
+          })
+       }
    }
    
    renderInputRadioOr() {
