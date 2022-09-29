@@ -177,9 +177,9 @@ class FilterColor {
        document.getElementById('component').append( this.buttonFilter )
        this.buttonFilter.onclick = () => {
            this.renderButtonWord();
-           this.remoteInputText();
            this.renderInputRadio();
-           this.renderInputRadioOr()
+           this.renderInputRadioOr();
+           this.remoteInputText();   
        }
    
    }
@@ -211,7 +211,7 @@ class FilterColor {
        this.InputRadioOr.onchange = () => {
            console.log(`.${document.querySelector('.button-word').value}`)
            // console.log(`${document.querySelector('.button-word').value}`)
-           document.querySelectorAll(`.${document.querySelector('.button-word').value}`).forEach((i) => i.remove())
+           document.querySelectorAll(`.${this.InputRadioOr.value`).forEach((i) => i.remove())
        }
    }
    
