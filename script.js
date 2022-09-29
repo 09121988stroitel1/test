@@ -121,7 +121,7 @@ class FilterColor {
        this.divColors =document.createElement('div')
        const arrayCalor = ["red", "green", "blue", "yellow", "pink", "black", "orange", "purple"];
        this.divColors.className = this.randomClass(arrayCalor)
-       document.getElementById('component').append(this.divColors)
+       document.querySelector('.container').append(this.divColors)
    }
    
    receiveButton () {
@@ -132,11 +132,17 @@ class FilterColor {
        let count = 24;
        this.buttonInput.onclick = () => { 
            this.remoteButton();
+           this.renderDivContainer();
            this.renderInputText();
            this.renderButtonFilter();
           while(count) {this.renderDivColors(); count--};
    
        }
+   }
+   renderDivContainer() {
+       this.DivContainer = document.createElement('div')
+       this.DivContainer.className = 'container'
+       document.getElementById('component').append(this.DivContainer)
    }
    
    renderComponent() {
@@ -172,7 +178,8 @@ class FilterColor {
        this.buttonFilter.onclick = () => {
            this.renderButtonWord();
            this.remoteInputText();
-           this.renderInputRadio()
+           this.renderInputRadio();
+           this.renderInputRadioOr()
        }
    
    }
@@ -194,9 +201,22 @@ class FilterColor {
        document.getElementById('component').append( this.InputRadio )
    }
    
+   renderInputRadioOr() {
+       this.InputRadioOr = document.createElement('input')
+       this.InputRadioOr.type = 'radio'
+       this.InputRadioOr.name = 'contact'
+       this.InputRadioOr.className = 'button'
+       this.InputRadioOr.value = document.querySelector('.text-filter').value
+       document.getElementById('component').append( this.InputRadioOr )
+       this.InputRadioOr.onchange = () => {
+           console.log(`.${document.querySelector('.button-word').value}`)
+           // console.log(`${document.querySelector('.button-word').value}`)
+           document.querySelectorAll(`.${document.querySelector('.button-word').value}`).forEach((i) => i.remove())
+       }
+   }
    
      
    }
    window.onload = () => { new FilterColor() }
-
-
+   
+    
