@@ -220,7 +220,7 @@ class FilterColor {
        this.InputRadioOr.onchange = () => {
            console.log(`.${document.querySelector('.button-word').value}`)
            // console.log(`${document.querySelector('.button-word').value}`)
-           document.querySelectorAll(`.${this.InputRadioOr.value`).forEach((i) => i.remove())
+           document.querySelectorAll(`.${this.InputRadioOr.value}`).forEach((i) => i.remove())
        }
    }
    
