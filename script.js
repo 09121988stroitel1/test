@@ -197,9 +197,10 @@ class FilterColor {
        this.InputRadio.type = 'radio'
        this.InputRadio.name = 'contact'
        this.InputRadio.className = 'button'
-       this.InputRadio.value = 'или'
+       this.InputRadio.value = document.querySelector('.text-filter').value
        document.getElementById('component').append( this.InputRadio )
            this.InputRadio.onchange = () => {
+            console.log(this.InputRadio.value)
           this.DivContainer.querySelectorAll(`div`).forEach((i) => { 
           if(i.className !== this.InputRadio.value ) {
              i.remove()
@@ -218,9 +219,9 @@ class FilterColor {
        this.InputRadioOr.value = document.querySelector('.text-filter').value
        document.getElementById('component').append( this.InputRadioOr )
        this.InputRadioOr.onchange = () => {
-           console.log(`.${document.querySelector('.button-word').value}`)
+        //    console.log(`.${document.querySelector('.button-word').value}`)
            // console.log(`${document.querySelector('.button-word').value}`)
-           document.querySelectorAll(`.${this.InputRadioOr.value`).forEach((i) => i.remove())
+           document.querySelectorAll(`.${this.InputRadioOr.value}`).forEach((i) => i.remove())
        }
    }
    
