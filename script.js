@@ -180,6 +180,8 @@ class FilterColor {
            this.renderInputRadio();
            this.renderInputRadioOr();
            this.remoteInputText();   
+   
+          
        }
    
    }
@@ -197,7 +199,7 @@ class FilterColor {
        this.InputRadio.type = 'radio'
        this.InputRadio.name = 'contact'
        this.InputRadio.className = 'button'
-       this.InputRadio.value = document.querySelector('.text-filter').value
+       this.InputRadio.value = this.InputRadio.value
        document.getElementById('component').append( this.InputRadio )
            this.InputRadio.onchange = () => {
             console.log(this.InputRadio.value)
@@ -216,7 +218,7 @@ class FilterColor {
        this.InputRadioOr.type = 'radio'
        this.InputRadioOr.name = 'contact'
        this.InputRadioOr.className = 'button'
-       this.InputRadioOr.value = document.querySelector('.text-filter').value
+    //    this.InputRadioOr.value = document.querySelector('.text-filter').value
        document.getElementById('component').append( this.InputRadioOr )
        this.InputRadioOr.onchange = () => {
         //    console.log(`.${document.querySelector('.button-word').value}`)
