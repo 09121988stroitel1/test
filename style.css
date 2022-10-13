@@ -124,7 +124,8 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       margin: 0 auto;
-      /* background-color: #3498db; */
+      justify-items: center;
+      align-items: center;
       border: #e74c3c solid 4px;
       width: 35vw;
       height: 35vw;
