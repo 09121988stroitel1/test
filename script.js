@@ -104,6 +104,8 @@
 
 // Тест 2
 
+
+
 class FilterColor {
     buttonInput;
     divColors;
@@ -180,7 +182,6 @@ class FilterColor {
            this.renderInputRadio();
            this.renderInputRadioOr();
            this.remoteInputText();   
-   
           
        }
    
@@ -199,12 +200,14 @@ class FilterColor {
        this.InputRadio.type = 'radio'
        this.InputRadio.name = 'contact'
        this.InputRadio.className = 'button'
-       this.InputRadio.value = this.InputRadio.value
+       this.InputRadio.value = document.querySelector('.text-filter').value
+       console.log(this.InputRadio.value)
        document.getElementById('component').append( this.InputRadio )
-           this.InputRadio.onchange = () => {
-            console.log(this.InputRadio.value)
+           this.InputRadio.onchange = (event) => {
+             let target = event.target
+             console.log(target.value)
           this.DivContainer.querySelectorAll(`div`).forEach((i) => { 
-          if(i.className !== this.InputRadio.value ) {
+          if(i.className !== target.value ) {
              i.remove()
           } else {
               return i
@@ -218,12 +221,13 @@ class FilterColor {
        this.InputRadioOr.type = 'radio'
        this.InputRadioOr.name = 'contact'
        this.InputRadioOr.className = 'button'
-    //    this.InputRadioOr.value = document.querySelector('.text-filter').value
+       this.InputRadioOr.value = document.querySelector('.text-filter').value
        document.getElementById('component').append( this.InputRadioOr )
-       this.InputRadioOr.onchange = () => {
+       this.InputRadioOr.onchange = (e) => {
+          let target = e.target
         //    console.log(`.${document.querySelector('.button-word').value}`)
            // console.log(`${document.querySelector('.button-word').value}`)
-           document.querySelectorAll(`.${this.InputRadioOr.value}`).forEach((i) => i.remove())
+           document.querySelectorAll(`.${target.value}`).forEach((i) => i.remove())
        }
    }
    
@@ -231,4 +235,6 @@ class FilterColor {
    }
    window.onload = () => { new FilterColor() }
    
+
+
     
